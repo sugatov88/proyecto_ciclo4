@@ -39,7 +39,7 @@ export class MarcaVehiculoController {
     },
   })
   async find(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @param.query.object('filter') filter?: Filter<Vehiculo>,
   ): Promise<Vehiculo[]> {
     return this.marcaRepository.vehiculos(id).find(filter);
@@ -54,7 +54,7 @@ export class MarcaVehiculoController {
     },
   })
   async create(
-    @param.path.number('id') id: typeof Marca.prototype.id,
+    @param.path.string('id') id: typeof Marca.prototype.id,
     @requestBody({
       content: {
         'application/json': {
@@ -79,7 +79,7 @@ export class MarcaVehiculoController {
     },
   })
   async patch(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @requestBody({
       content: {
         'application/json': {
@@ -102,7 +102,7 @@ export class MarcaVehiculoController {
     },
   })
   async delete(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @param.query.object('where', getWhereSchemaFor(Vehiculo)) where?: Where<Vehiculo>,
   ): Promise<Count> {
     return this.marcaRepository.vehiculos(id).delete(where);

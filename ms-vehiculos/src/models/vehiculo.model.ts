@@ -1,4 +1,4 @@
-import {Entity, model, property, belongsTo} from '@loopback/repositoriy';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
 import {Marca} from './marca.model';
 import {Categoria} from './categoria.model';
 import {hasMany} from '@loopback/repository';
@@ -8,11 +8,11 @@ import {Fotos} from './fotos.model';
 @model()
 export class Vehiculo extends Entity {
   @property({
-    type: 'number',
+    type: 'String',
     id: true,
     generated: true,
   })
-  id?: number;
+  id?: String;
 
   @property({
     type: 'string',

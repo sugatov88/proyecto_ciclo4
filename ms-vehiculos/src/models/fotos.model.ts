@@ -4,11 +4,11 @@ import {Vehiculo} from './vehiculo.model';
 @model()
 export class Fotos extends Entity {
   @property({
-    type: 'number',
+    type: 'String',
     id: true,
     generated: true,
   })
-  id?: number;
+  id?: String;
 
   @property({
     type: 'string',
@@ -17,7 +17,7 @@ export class Fotos extends Entity {
   nombre: string;
 
   @belongsTo(() => Vehiculo)
-  vehiculoId: number;
+  vehiculoId: String;
 
   constructor(data?: Partial<Fotos>) {
     super(data);

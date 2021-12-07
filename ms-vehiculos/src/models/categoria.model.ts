@@ -3,11 +3,11 @@ import {Entity, model, property} from '@loopback/repository';
 @model()
 export class Categoria extends Entity {
   @property({
-    type: 'number',
+    type: 'String',
     id: true,
     generated: true,
   })
-  id?: number;
+  id?: String;
 
   @property({
     type: 'string',

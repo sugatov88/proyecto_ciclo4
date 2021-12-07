@@ -39,7 +39,7 @@ export class VehiculoFotosController {
     },
   })
   async find(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @param.query.object('filter') filter?: Filter<Fotos>,
   ): Promise<Fotos[]> {
     return this.vehiculoRepository.fotos(id).find(filter);
@@ -54,7 +54,7 @@ export class VehiculoFotosController {
     },
   })
   async create(
-    @param.path.number('id') id: typeof Vehiculo.prototype.id,
+    @param.path.string('id') id: typeof Vehiculo.prototype.id,
     @requestBody({
       content: {
         'application/json': {
@@ -79,7 +79,7 @@ export class VehiculoFotosController {
     },
   })
   async patch(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @requestBody({
       content: {
         'application/json': {
@@ -102,7 +102,7 @@ export class VehiculoFotosController {
     },
   })
   async delete(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @param.query.object('where', getWhereSchemaFor(Fotos)) where?: Where<Fotos>,
   ): Promise<Count> {
     return this.vehiculoRepository.fotos(id).delete(where);

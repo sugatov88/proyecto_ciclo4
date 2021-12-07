@@ -31,7 +31,7 @@ export class FotosVehiculoController {
     },
   })
   async getVehiculo(
-    @param.path.number('id') id: typeof Fotos.prototype.id,
+    @param.path.string('id') id: typeof Fotos.prototype.id,
   ): Promise<Vehiculo> {
     return this.fotosRepository.vehiculo(id);
   }

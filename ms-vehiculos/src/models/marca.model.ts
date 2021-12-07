@@ -4,11 +4,11 @@ import {Vehiculo} from './vehiculo.model';
 @model()
 export class Marca extends Entity {
   @property({
-    type: 'number',
+    type: 'String',
     id: true,
     generated: true,
   })
-  id?: number;
+  id?: String;
 
   @property({
     type: 'string',

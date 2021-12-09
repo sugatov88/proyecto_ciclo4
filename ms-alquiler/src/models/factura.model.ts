@@ -32,6 +32,11 @@ export class Factura extends Entity {
   })
   alquilerVehiculoId?: string;
 
+  @property({
+    type: 'string',
+  })
+  clienteId?: string;
+
   constructor(data?: Partial<Factura>) {
     super(data);
   }

@@ -12,12 +12,17 @@ export class CategoriVehiculo extends Entity {
   @property({
     type: 'string',
   })
-  categoriaId?: string;
+  categoriId?: string;
 
   @property({
     type: 'String',
   })
   vehiculoId?: String;
+
+  @property({
+    type: 'string',
+  })
+  categoriaId?: string;
 
   constructor(data?: Partial<CategoriVehiculo>) {
     super(data);

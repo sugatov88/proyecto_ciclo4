@@ -1,5 +1,6 @@
-import {Entity, model, property, hasOne} from '@loopback/repository';
+import {Entity, model, property, hasOne, belongsTo} from '@loopback/repository';
 import {Factura} from './factura.model';
+import {Vehiculo} from './vehiculo.model';
 
 @model()
 export class AlquilerVehiculo extends Entity {
@@ -26,10 +27,9 @@ export class AlquilerVehiculo extends Entity {
   })
   clienteId?: string;
 
-  @property({
-    type: 'String',
-  })
-  vehiculoId?: String;
+
+  @belongsTo(() => Vehiculo)
+  vehiculoId: String;
 
   @hasOne(() => Factura)
   factura: Factura;

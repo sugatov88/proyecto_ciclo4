@@ -9,3 +9,8 @@ export * from './fotos.repository';
 export * from './marca.repository';
 export * from './usuario-asesor.repository';
 export * from './vehiculo.repository';
+// export * from './asesor-alquiler-vehiculo.repository';
+// export * from './alquiler-vehiculo-factura.repository';
+// export * from './cliente-alquiler-vehiculo.repository';
+
+

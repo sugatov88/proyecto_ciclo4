@@ -17,6 +17,19 @@ export class AlquilerVehiculo extends Entity {
   })
   placaVehiculo: string;
 
+
+
+
+
+
+  @hasOne(() => Factura)
+  factura: Factura;
+
+  @property({
+    type: 'string',
+  })
+  vehiculoId?: string;
+
   @property({
     type: 'string',
   })
@@ -26,13 +39,6 @@ export class AlquilerVehiculo extends Entity {
     type: 'string',
   })
   clienteId?: string;
-
-
-  @belongsTo(() => Vehiculo)
-  vehiculoId: String;
-
-  @hasOne(() => Factura)
-  factura: Factura;
 
   constructor(data?: Partial<AlquilerVehiculo>) {
     super(data);

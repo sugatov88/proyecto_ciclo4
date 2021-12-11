@@ -8,7 +8,7 @@ export class Fotos extends Entity {
     id: true,
     generated: true,
   })
-  id?: String;
+  id?: string;
 
   @property({
     type: 'string',

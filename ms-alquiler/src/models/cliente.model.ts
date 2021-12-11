@@ -33,7 +33,10 @@ export class Cliente extends Entity {
   })
   correo: string;
 
-
+  @property({
+    type: 'string',
+  })
+  asesorId?: string;
 
   @hasMany(() => AlquilerVehiculo)
   alquilerVehiculos: AlquilerVehiculo[];

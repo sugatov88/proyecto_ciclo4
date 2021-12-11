@@ -1,6 +1,5 @@
 import {Entity, model, property, hasMany} from '@loopback/repository';
 import {Vehiculo} from './vehiculo.model';
-import {CategoriVehiculo} from './categori-vehiculo.model';
 
 @model()
 export class Categoria extends Entity {
@@ -16,8 +15,6 @@ export class Categoria extends Entity {
   })
   nombre: string;
 
-  @hasMany(() => Vehiculo, {through: {model: () => CategoriVehiculo}})
-  vehiculos: Vehiculo[];
 
   constructor(data?: Partial<Categoria>) {
     super(data);

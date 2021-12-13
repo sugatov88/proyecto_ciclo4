@@ -59,7 +59,7 @@ export class NuevoUsuarioController {
           tk:token
         }
       }else {
-        throw new  HttpErrors[401]("Datos Invalidos Pilo ");
+        throw new  HttpErrors[401]("Datos Invalidos");
       }
 
     }
@@ -92,7 +92,7 @@ export class NuevoUsuarioController {
   //notificar usuario
   let destino= nuevoUsuario.correo;
   let asunto="Registro prueba";
-  let contenido = `Hola mensaje para ${nuevoUsuario.nombres}, su usuario es ${nuevoUsuario.correo} y su contraseña es ${clave}}`;
+  let contenido = `Hola mensaje para ${nuevoUsuario.nombres}, su usuario es ${nuevoUsuario.correo} y su contraseña es ${clave}`;
   fetch(`${Llaves.usrServicioNotificaciones}/envio-correo?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
   .then((data:any)=>{
   console.log(data);

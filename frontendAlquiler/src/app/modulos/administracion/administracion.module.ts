@@ -14,6 +14,7 @@ import { CrearVehiculoComponent } from './vehiculo/crear-vehiculo/crear-vehiculo
 import { BuscarVehiculoComponent } from './vehiculo/buscar-vehiculo/buscar-vehiculo.component';
 import { ModificarVehiculoComponent } from './vehiculo/modificar-vehiculo/modificar-vehiculo.component';
 import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar-vehiculo.component';
+import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar
     CrearVehiculoComponent,
     BuscarVehiculoComponent,
     ModificarVehiculoComponent,
-    EliminarVehiculoComponent
+    EliminarVehiculoComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     CommonModule,

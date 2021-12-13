@@ -22,7 +22,9 @@ import {NuevoUsuario} from '../models';
 import {NuevoUsuarioRepository} from '../repositories';
 import { AutenticacionService } from '../services';
 import {Llaves} from '../config/llaves';
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
+
+
 
 export class NuevoUsuarioController {
   constructor(
@@ -59,9 +61,8 @@ export class NuevoUsuarioController {
   //notificar usuario
   let destino= nuevoUsuario.correo;
   let asunto="Registro prueba";
-  let contenido = `Hola mensaje para ${nuevoUsuario.nombres}, su usuario es ${nuevoUsuario.correo} y su contraseña es ${clave}`;
-
-  fetch(`${Llaves.usrServicioNotificaciones}/envio_correo?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
+  let contenido = `Hola mensaje para ${nuevoUsuario.nombres}, su usuario es ${nuevoUsuario.correo} y su contraseña es ${clave}}`;
+  fetch(`${Llaves.usrServicioNotificaciones}/envio-correo?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
   .then((data:any)=>{
   console.log(data);
   })

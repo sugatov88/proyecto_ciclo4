@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(85, 135, 151);
+  }
+  
+
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  input{
+      border: 5px double #b80505;
+      text-align: center;
+      color: #092170;
+  }

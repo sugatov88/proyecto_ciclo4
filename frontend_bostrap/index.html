@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- sitio para que sea responsive-->
+    <link rel="stylesheet" href="src/css/estilos.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Autos Gus Y Pilo</title>
+    
+  </head>
+  <body style="background-color:#043342;">
+   
+    <br />
+    <div style="background-color:#6dcae9;" class="container">
+      <h1 style ="color:rgba(8, 43, 12, 0.5);"> Pagina Principal</h1>
+      <br />
+       <h2 style ="color:rgba(59, 8, 75, 0.5);">Misión</h2>
+        <h5>Consecionario Gus y Pilo es una empresa familiar colombiana constituida con el proposito unánime de ofrecer confort y calidad a la hora de movilizarsse en las distintas ciudades del pais, dando a sus clientes el servicio de alquiler de múltiples medios de transporte, a un precio accequible acorde a las condiciones de cada vehiculo y a las necesidades del usuario.</h5>
+        <br />
+      <h2 style ="color:rgba(53, 10, 82, 0.5);"> Visión</h2>
+        <h5> A largo plazo Consecionario Gus y Pilo será el principal prestador de servicios de alquiler de vehiculos de transporte en el país, siendo reconocido por los entes de transporte como una de las promotoras de la movimilidad verde, por sus multiples aportes al medio ambiente contando con mas del 50% de vehiculos electricos y mas de 300 bicicletas en el inventario. </h5>
+        <br />
+        <br />
+      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">NOSOTROS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Nuestros Autos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">¿Dónde estamos?</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  otras opcioens
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Contáctanos</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="validacionNombre" class="form-label">Nombre Completo</label>
+          <input type="text" class="form-control" id="validacionNombre" required>
+          <div class="invalid-feedback">
+            El nombre es obligatorio
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="Validaciondoc" class="form-label">Documento de identidad</label>
+          <input type="number" class="form-control" id="Validaciondoc" required>
+          <div class="invalid-feedback">
+            El apellido es obligatorio
+          </div>
+        </div>
+        <div class="col-md-8">
+          <label for="validacionCorreo" class="form-label">Correo Electronico</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="email" class="form-control" id="validacionCorreo" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+                El Correo electronico es obligatorio
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validacionCelular" class="form-label">Celular</label>
+          <input type="number" class="form-control" id="validacionCelular" required>
+          <div class="invalid-feedback">
+            El numero celular es obligatorio
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepto terminos y condiciones de concesionario Gus y Pilo S.A
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Validar</button>
+        </div>
+      </form>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="src/js/funciones.js"> </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+  </body>
+</html>

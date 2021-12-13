@@ -14,7 +14,10 @@ import { CrearVehiculoComponent } from './vehiculo/crear-vehiculo/crear-vehiculo
 import { BuscarVehiculoComponent } from './vehiculo/buscar-vehiculo/buscar-vehiculo.component';
 import { ModificarVehiculoComponent } from './vehiculo/modificar-vehiculo/modificar-vehiculo.component';
 import { EliminarVehiculoComponent } from './vehiculo/eliminar-vehiculo/eliminar-vehiculo.component';
-import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
+import { CrearAdministradorComponent } from './administrador/crear-administrador/crear-administrador.component';
+import { BuscarAdministradorComponent } from './administrador/buscar-administrador/buscar-administrador.component';
+import { ModificarAdministradorComponent } from './administrador/modificar-administrador/modificar-administrador.component';
+import { EliminarAdministradorComponent } from './administrador/eliminar-administrador/eliminar-administrador.component';
 
 
 @NgModule({
@@ -31,10 +34,13 @@ import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.co
     BuscarVehiculoComponent,
     ModificarVehiculoComponent,
     EliminarVehiculoComponent,
-    CrearUsuarioComponent
+    CrearAdministradorComponent,
+    BuscarAdministradorComponent,
+    ModificarAdministradorComponent,
+    EliminarAdministradorComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
     AdministracionRoutingModule
   ]
 })

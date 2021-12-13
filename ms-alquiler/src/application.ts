@@ -1,6 +1,8 @@
 import {BootMixin} from '@loopback/boot';
+import {AuthenticationComponent, registerAuthenticationStrategy } from '@loopback/authentication';
 import {ApplicationConfig} from '@loopback/core';
-import {
+import {EstrategiaAdministrador} from './Strategies/admin.strategy';
+import{
   RestExplorerBindings,
   RestExplorerComponent,
 } from '@loopback/rest-explorer';
@@ -40,5 +42,10 @@ export class AppAlquiler extends BootMixin(
         nested: true,
       },
     };
+    registerAuthenticationStrategy(this, EstrategiaAdministrador);
+    this.component(AuthenticationComponent);
   }
 }
+
+
+

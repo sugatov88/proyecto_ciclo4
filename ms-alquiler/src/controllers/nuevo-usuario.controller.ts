@@ -17,8 +17,9 @@ import {
   del,
   requestBody,
   response,
+  HttpErrors,
 } from '@loopback/rest';
-import {NuevoUsuario} from '../models';
+import {Credenciales, NuevoUsuario} from '../models';
 import {NuevoUsuarioRepository} from '../repositories';
 import { AutenticacionService } from '../services';
 import {Llaves} from '../config/llaves';
@@ -33,6 +34,36 @@ export class NuevoUsuarioController {
   @service(AutenticacionService)
   public serviceAutenticacion: AutenticacionService
     ) {}
+
+    @post("/identificarNuevoUsuario",{
+      responses:{
+        '200':{
+          description:"Identificacion de Nuevo Usuarios"
+        }
+    }
+    } )
+
+    async identificarNuevoUsuario(
+      @requestBody() credenciales: Credenciales
+
+    ){
+      let p = await this.serviceAutenticacion.IdentificarNuevoUsuario(credenciales.usuario,credenciales.clave);
+      if(p){
+        let token = this.serviceAutenticacion.GenerarTokenJWT(p);
+        return{
+          datos: {
+            nombre: p.nombres,
+            correo: p.correo,
+            id: p.id
+          },
+          tk:token
+        }
+      }else {
+        throw new  HttpErrors[401]("Datos Invalidos Pilo ");
+      }
+
+    }
+
 
   @post('/nuevo-usuarios')
   @response(200, {

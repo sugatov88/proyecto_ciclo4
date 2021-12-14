@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path:"",
-    pathMatch:'ful',
+    pathMatch:"full",
     redirectTo:"/inicio"
   },
   {

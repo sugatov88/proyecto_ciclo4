@@ -18,10 +18,7 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
-<<<<<<< HEAD
     "express": "^4.17.1",
-=======
->>>>>>> 51f6af63034833028cc8cf0793901e36ba095af2
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
